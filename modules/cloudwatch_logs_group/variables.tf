@@ -3,19 +3,19 @@
 
 variable "log_group_name" {
   type        = string
-  description = "value"
+  description = "The name of the log group. If omitted, Terraform will assign a random, unique name."
 }
 
 variable "retention_in_days" {
   type        = number
   default     = 3653
-  description = "value"
+  description = "Specifies the number of days you want to retain log events in the specified log group. "
 }
 
 variable "kms_key_id" {
   type        = string
   default     = null
-  description = "value"
+  description = "The ARN of the KMS Key to use when encrypting log data."
 }
 
 variable "tags" {
