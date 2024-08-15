@@ -1,0 +1,7 @@
+# Copyright Amazon.com, Inc. or its affiliates. All Rights Reserved.
+# SPDX-License-Identifier: MIT-0
+
+#!/bin/bash
+yum install -y lustre-client
+mkdir -p /mnt/fsx
+mount -t lustre -o relatime,flock ${FSX_DNS_NAME}@tcp:/${FSX_MOUNT_NAME} /mnt/fsx
